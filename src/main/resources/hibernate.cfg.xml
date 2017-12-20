@@ -1,0 +1,50 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD .//EM"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="connection.url">jdbc:mysql://localhost:3306/iscool</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">false</property>
+		<property name="format_sql">true</property>
+
+		<!-- Mapeamentos da classe de usuários e as classes que herdam de usuário -->
+		<mapping class="br.ufpi.easii.iscool.entidade.Usuario"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.GestorDeRede"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.GestorEscolar"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Professor"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Aluno"/>
+		
+		<!-- Mapeamento da classe rede escolar -->
+		<mapping class="br.ufpi.easii.iscool.entidade.RedeEscolar"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Escola"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Turma"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Disciplina"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Prova"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Simulado"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Questao"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Gabarito"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Resposta"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.RespostaCorreta"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Nota"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.DadosCadastrais"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Endereco"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Curso"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Gamification"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.InsigniaDefault"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.InsigniaDisciplina"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Insignia"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Responsavel"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Explicacao"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.Feed"/>
+		<mapping class="br.ufpi.easii.iscool.entidade.FeedEscolar"/>
+	</session-factory>
+
+</hibernate-configuration>
